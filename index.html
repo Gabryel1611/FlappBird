@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oráculo Elementar | Previsões Arcanas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1 class="glow-text">Oráculo Elementar</h1>
+            <p class="subtitle">Descubra os segredos do cosmos através dos elementos</p>
+        </header>
+
+        <main>
+            <div id="battlefield">
+                <!-- Personagem 1 (Player) -->
+                <div class="character-container" id="player-1">
+                    <div class="avatar glass">👤</div>
+                    <div class="stats">
+                        <span class="char-name">O Guardião (Você)</span>
+                        <div class="hp-bar-bg">
+                            <div id="hp-player-1" class="hp-bar-fill" style="width: 100%;"></div>
+                        </div>
+                        <span class="hp-text"><span id="hp-val-1">100</span>/100 HP</span>
+                    </div>
+                </div>
+
+                <div class="vs-divider">VS</div>
+
+                <!-- Personagem 2 (AI) -->
+                <div class="character-container" id="player-2">
+                    <div class="stats right-align">
+                        <span class="char-name">Oráculo Felino (IA)</span>
+                        <div class="hp-bar-bg">
+                            <div id="hp-player-2" class="hp-bar-fill" style="width: 100%;"></div>
+                        </div>
+                        <span class="hp-text"><span id="hp-val-2">100</span>/100 HP</span>
+                    </div>
+                    <div class="avatar glass enemy-avatar">
+                        <img src="assets/cat-oracle.png" alt="Oráculo Felino">
+                    </div>
+                </div>
+            </div>
+
+            <div id="game-arena">
+                <!-- Zona do Inimigo (Topo) -->
+                <div class="hand-container enemy-hand" id="enemy-hand">
+                    <div class="card-back"></div>
+                    <div class="card-back"></div>
+                    <div class="card-back"></div>
+                </div>
+
+                <!-- Campo de Batalha (Centro) -->
+                <div id="combat-zone">
+                    <div class="played-card-slot" id="enemy-played">
+                        <small>IA JOGOU</small>
+                    </div>
+                    <div class="vs-text">VS</div>
+                    <div class="played-card-slot" id="player-played">
+                        <small>VOCÊ JOGOU</small>
+                    </div>
+                </div>
+
+                <!-- Sua Mão (Baixo) -->
+                <div class="hand-container player-hand" id="player-hand">
+                    <!-- Cards will be injected here -->
+                </div>
+            </div>
+
+            <div id="battle-log" class="glass">
+                <p>Escolha uma carta da sua mão para iniciar o combate!</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Oráculo Elementar - Sabedoria Elemental</p>
+        </footer>
+    </div>
+
+    <!-- Modal for card details (Optional/Future) -->
+    <div id="modal" class="hidden"></div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>
